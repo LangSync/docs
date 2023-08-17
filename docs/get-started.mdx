@@ -1,0 +1,190 @@
+---
+slug: /
+sidebar_position: 1
+custom_edit_url: null
+---
+
+# Lang Sync
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+Lang Sync is an AI powered Command Line Interface (CLI) tool that helps you process your original language-specific files such translations, strings & texts.. and generates the corresponding translated files in the target language(s).
+
+In simple words, it helps you translate your files from one language to others with one action using the power of AI.
+
+## Key Features
+
+- **AI Powered**: LangSync uses the power of AI to translate your files, it uses the [Microsoft Translator](https://azure.microsoft.com/en-us/services/cognitive-services/translator/) API to translate your files.
+- **Accurate**: because we use the top AI engines in the world, you can expect the best results.
+- **Customizable**: you can customize & consigurethe translation process to fit your needs, you can specify the target languages, the source language, the file format, and more.
+- **Easy to use**: LangSync is a CLI tool, you can use it from your terminal, even if you don't have any programming experience.
+- **Usable in any directory**: you can use it directly anywhere you want, if you're a developer, you can use it in your project directory, if you're a manager, you can use it in your documents directory, and so on...
+
+## What it can do?
+
+Let's take a real-world use case to demonstrate what LangSync solves and benefits you, let's say you're a developer or a manager who works on a NodeJS project, with this file structure:
+
+```bash title="📁 .../my-nodejs-projects"
+
+my-project
+│
+├── .node_modules
+│   └── ...
+│
+├── locales
+# highlight-next-line
+│   └── en.json
+│
+├── src
+│   └── index.js
+│
+└── package.json
+
+```
+
+This has only one localization file `en.json` that represents the English version of the texts in your project:
+
+<Tabs>
+
+  <TabItem value="en.json" label="en.json">
+
+```json showLineNumbers
+{
+  "hello": "Hello",
+  "world": "World",
+  "welcome": "Welcome to my NodeJS project"
+}
+```
+
+  </TabItem>
+</Tabs>
+
+Now that your project is ready, you may want to target more people around the world, which means you will need to support more languages, let's say you **Spanish**, **Arabic**, **German**, **italian** and **Chinese**.
+
+Imagine how much time and effort you will need to get this done, you will need to find a translator for each language, and you will need to send him the file, and wait for him to translate it, and then you will need to merge the translated files into your project, and then you will need to test it, and then you will need to repeat the same process for each language. and I know, **it's frustrating**.
+
+But, with LangSync, you're one action away from achieving this, all you need to do is to run this command:
+
+<Tabs>
+  <TabItem value="powershell" label="Powershell" >
+
+```powershell
+langsync start
+```
+
+  </TabItem>
+
+  <TabItem value="cmd" label="CMD">
+
+```cmd
+langsync start
+```
+
+</TabItem>
+
+<TabItem value="bash" label="Bash">
+
+```bash
+$ langsync start
+```
+
+  </TabItem>
+
+</Tabs>
+
+it will literally generate what we want, the new AI translated files in the target languages:
+
+```bash title="📁 .../my-nodejs-projects"
+
+myProject
+│
+├── .node_modules
+│   └── ...
+│
+├── locales
+│   ├── en.json
+# highlight-start
+│   ├── es.json
+│   ├── ar.json
+│   ├── de.json
+│   ├── it.json
+│   └── zh.json
+# highlight-end
+│
+├── src
+│   └── index.js
+│
+└── package.json
+
+```
+
+These are the content of the new files:
+
+<Tabs>
+
+  <TabItem value="es.json" label="es.json">
+
+```json showLineNumbers
+{
+  "hello": "Hola",
+  "world": "Mundo",
+  "welcome": "Bienvenido a mi proyecto NodeJS"
+}
+```
+
+  </TabItem>
+
+  <TabItem value="ar.json" label="ar.json" default>
+
+```json showLineNumbers
+{
+  "hello": "مرحبا",
+  "world": "عالم",
+  "welcome": "مرحبا بكم في مشروعي NodeJS"
+}
+```
+
+  </TabItem>
+  
+  <TabItem value="de.json" label="de.json">
+
+```json showLineNumbers
+{
+  "hello": "Hallo",
+  "world": "Welt",
+  "welcome": "Willkommen in meinem NodeJS-Projekt"
+}
+```
+
+  </TabItem>
+
+  <TabItem value="it.json" label="it.json">
+
+```json showLineNumbers
+{
+  "hello": "Ciao",
+  "world": "Mondo",
+  "welcome": "Benvenuto nel mio progetto NodeJS"
+}
+```
+
+  </TabItem>
+
+  <TabItem value="zh.json" label="zh.json">
+
+```json showLineNumbers
+{
+  "hello": "你好",
+  "world": "世界",
+  "welcome": "欢迎来到我的NodeJS项目"
+}
+```
+
+  </TabItem>
+
+</Tabs>
+
+## Get Started
+
+What do you waiting for? let's get started, follow the [Installation](./installation) guide to learn how to install and use LangSync.
