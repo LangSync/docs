@@ -4,26 +4,30 @@ sidebar_position: 1
 custom_edit_url: null
 ---
 
-# Lang Sync
+# LangSync
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-Lang Sync is an AI powered Command Line Interface (CLI) tool that helps you process your original language-specific files such translations, strings & texts.. and generates the corresponding translated files in the target language(s).
+LangSync is an AI powered Command Line Interface (CLI) tool that allows you to target the global market for your software (apps, websites, games, projects...) by processing your original JSON files for one laungage, then with the help of a powerful set of AI engines it generates very accurate other laungages localization & translations that stays in your software context.
 
-In simple words, it helps you translate your files from one language to others with one action using the power of AI.
+As example, if you have a mobile app that supports only the English laungage, which saves all its translations in a `en.json` file, you can literally support any other laungaues by a runinng a simple command, then see our magic happen.
 
 ## Key Features
 
-- **AI Powered**: LangSync uses the power of AI to translate your files, it uses the [Microsoft Translator](https://azure.microsoft.com/en-us/services/cognitive-services/translator/) API to translate your files.
-- **Accurate**: because we use the top AI engines in the world, you can expect the best results.
-- **Customizable**: you can customize & consigurethe translation process to fit your needs, you can specify the target languages, the source language, the file format, and more.
-- **Easy to use**: LangSync is a CLI tool, you can use it from your terminal, even if you don't have any programming experience.
-- **Usable in any directory**: you can use it directly anywhere you want, if you're a developer, you can use it in your project directory, if you're a manager, you can use it in your documents directory, and so on...
+- **AI Powered**: LangSync make uses of very powerful AI models to localize your software, making sure that everything matches its context.
 
-## What it can do?
+- **Accurate & precise**: Having the most accuracy possible is what matters to LangSync, And because the pre-trained AI models we use, the generated language-specific localization texts will match the sens of the original ones, instead of the direct common translation services out there.
 
-Let's take a real-world use case to demonstrate what LangSync solves and benefits you, let's say you're a developer or a manager who works on a NodeJS project, with this file structure:
+- **Configurable**: Well this is obvious, right? LangSync allows you to make a very straitforward configuration of what you will provide (your original localization file) and what we will provide (the generated new localization files).
+
+- **Easy to use**: LangSync is a CLI tool that is made by a developer for other developers. it exposes direct commands achieve what you want, And the very beginner developer can literally follow our guides & documentation to use it.
+
+- **Not Only For developers**: LangSync is for everyone. if you have or can provide only one JSON file of one laungage translations, then you can generate 10 more, if you are not familiar with CLIs and terminal... don"t worry, LangSync will come as a UI-based software too! subscribe to our email list in order to be the first to try it.
+
+## How it works?
+
+Let's take a real-world use case to demonstrate what you will really get and how it will benefit you. And so, let's say you're a developer who works on a server-side project with NodeJS, Asuuming this file structure:
 
 ```bash title="📁 .../my-nodejs-projects"
 
@@ -37,13 +41,17 @@ my-project
 │   └── en.json
 │
 ├── src
-│   └── index.js
+│   └── server.js
 │
 └── package.json
 
 ```
 
-This has only one localization file `en.json` that represents the English version of the texts in your project:
+This server intends to receive some requests, and returns a localization file to the client so it will use it, this project is really just for demonstrating purpose and not specific, As you can have a Flutter, javascript, electron, laravel, rust, c... projects, the usage sremains the same.
+
+<br />
+
+Let's see what `en.json` contains:
 
 <Tabs>
 
@@ -54,17 +62,16 @@ This has only one localization file `en.json` that represents the English versio
   "hello": "Hello",
   "world": "World",
   "welcome": "Welcome to my NodeJS project"
+  ...
 }
 ```
 
   </TabItem>
 </Tabs>
 
-Now that your project is ready, you may want to target more people around the world, which means you will need to support more languages, let's say you **Spanish**, **Arabic**, **German**, **italian** and **Chinese**.
+Now that you want to reach the global market, your software wants to supports more languages
 
-Imagine how much time and effort you will need to get this done, you will need to find a translator for each language, and you will need to send him the file, and wait for him to translate it, and then you will need to merge the translated files into your project, and then you will need to test it, and then you will need to repeat the same process for each language. and I know, **it's frustrating**.
-
-But, with LangSync, you're one action away from achieving this, all you need to do is to run this command:
+let's say you want to target the **Spanish**, **Arabic**, **German**, **italian** and **Chinese** languages, you will literally need to run a simple command:
 
 <Tabs>
   <TabItem value="powershell" label="Powershell" >
@@ -93,7 +100,29 @@ $ langsync start
 
 </Tabs>
 
-it will literally generate what we want, the new AI translated files in the target languages:
+That's it, now what you will do is to take a short break or prepare another cup of coffee. After the file gets processed by our AI models and finished it's localization, you must see something like this on your terminal:
+
+```bash
+Localizing process starting..
+✓ Your langsync.yaml file and configuration are valid. (1ms)
+✓ Your source file has been saved succesfully. (1.4s)
+[WARN] The ID of this operation is: 24332154-668f-4b5d-9a12-173d5ffa252c. in case of any issues, please contact us providing this ID so we can help.
+✓ Localization operation is completed successfully. (94.6s)
+
+
+Generating localization files: es.json, ar.json, de.json, it.json, zh.json:
+✓ file es.json is created succesfully, ./locales/es.json (1ms)
+✓ file ar.json is created succesfully, ./locales/ar.json (1ms)
+✓ file de.json is created succesfully, ./locales/de.json (0ms)
+✓ file it.json is created succesfully, ./locales/it.json (1ms)
+✓ file zh.json is created succesfully, ./locales/zh.json (0ms)
+All files are created succesfully.
+All done!
+```
+
+Congratulations, This was a success message and you have now a new langauge localization under the `locales` folder.
+
+Your project folder structure is now:
 
 ```bash title="📁 .../my-nodejs-projects"
 
@@ -119,7 +148,7 @@ myProject
 
 ```
 
-These are the content of the new files:
+These are the content of the new localization files:
 
 <Tabs>
 
@@ -129,7 +158,8 @@ These are the content of the new files:
 {
   "hello": "Hola",
   "world": "Mundo",
-  "welcome": "Bienvenido a mi proyecto NodeJS"
+  "welcome": "Bienvenido a mi proyecto de NodeJS"
+  ...
 }
 ```
 
@@ -140,8 +170,9 @@ These are the content of the new files:
 ```json showLineNumbers
 {
   "hello": "مرحبا",
-  "world": "عالم",
-  "welcome": "مرحبا بكم في مشروعي NodeJS"
+  "world": "العالم",
+  "welcome": "مرحبا بك في مشروعي NodeJS"
+  ...
 }
 ```
 
@@ -153,7 +184,8 @@ These are the content of the new files:
 {
   "hello": "Hallo",
   "world": "Welt",
-  "welcome": "Willkommen in meinem NodeJS-Projekt"
+  "welcome": "Willkommen zu meinem NodeJS Projekt"
+  ...
 }
 ```
 
@@ -165,7 +197,8 @@ These are the content of the new files:
 {
   "hello": "Ciao",
   "world": "Mondo",
-  "welcome": "Benvenuto nel mio progetto NodeJS"
+  "welcome": "Benvenuto al mio progetto NodeJS"
+  ...
 }
 ```
 
@@ -178,6 +211,7 @@ These are the content of the new files:
   "hello": "你好",
   "world": "世界",
   "welcome": "欢迎来到我的NodeJS项目"
+  ...
 }
 ```
 
@@ -185,6 +219,10 @@ These are the content of the new files:
 
 </Tabs>
 
-## Get Started
+<br />
 
-What do you waiting for? let's get started, follow the [Installation](./installation) guide to learn how to install and use LangSync.
+Wasn't that hard, isn't it?
+
+## What's Next?
+
+After having a general overviewover LangSync, let's dive into the [installation](./installation).

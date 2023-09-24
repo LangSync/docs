@@ -4,52 +4,57 @@ sidebar_position: 2
 
 # Configuration
 
-This section will explain how to configure the CLI to your needs, including setting up your default project, default language and more.
+This section will explain how to configure the CLI to your needs inside your project, including setting up your original localization file, the target new localizations languages, and the output directory..
+
+LangSync configurations is basically represented in a `langsync.yaml` file that will live in your project root directory.
+
+You can either create and modify that file manually, or using the CLI. we recommend using the CLI since it exposes an instant validation of the configuration.
 
 ## Creating your configuration file
 
-From your project directory, creae a new config file using the following command:
+From your project directory, create a new config file using the following command:
 
 ```bash
 langsync config create
 ```
 
-This will create a new configuration file in your project directory named `config.langsync`, open it from your favorite text/code editor and you will see the following:
+This will prompt you to input all the necessary options in format of questions that you will need to answer such asking you about the output directory, the target localization languages..
 
-```env
-INPUT_FILE = path/to/your/input/file
-TARGET_LANGUAGES = lang1,lang2,lang3
+:::note
+if a `langsync.yaml` already exists in your project directory, LangSync will notify you about that and ask you if you want to overwrite it.
+:::
+
+After you do set all your configuration options, you will notice that a `langsync.yaml` file now exists in yout project directory. this is the file that will be used each time you will try to start a new localization process.
+
+Example of a `langsync.yaml` file content:
+
+```yaml
+langsync:
+
+  source: './example/locales/en.json' 
+
+  output: './example/locales' 
+
+  target: [fr, de, ar, de, zh] 
+
 ```
 
-You can now edit the file to your needs:
+Check [configuration options](#configuration-options) section to learn about all the possible configuration you can do.
 
-- Change the `INPUT_FILE` value the path of the source file you want to translate, **LangSync** will detect it's source language automatically.
-- Change the `TARGET_LANGUAGES` value to a comma-separated list of the languages you want to translate your source file to.
+## Configuration Options
 
-### Example of real-world configuration
+LangSync configuration options:
 
-, as example saying that we have a software project with the following structure:
+- `source`: The JSON source file that contains your current software localizations for a certain languauge, it must be a file path.
 
-```bash
+- `output`: The directory where the new generated localizations JSON files will be put inside, it must be a directory path.
 
-├── src
-│   ├── code
-│   │   ├── index.js
-│   │   └── ...
-│   └── assets
-│       ├── locales
-│       │   ├── en.json
-│       └── ...
-└── ...
-```
+- `target`: The new languages which you want to localize your software with, it must be a list of languages names. (We recommend following the the [List of ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for languages).
 
-What we want is to translate the `en.json` to the German and Italian languages, so we will set the `INPUT_FILE` value to `src/assets/locales/en.json`, and the `TARGET_LANGUAGES` value to `de,it`, so the final configuration file will look like this:
-
-```env
-INPUT_FILE = src/assets/locales/en.json
-TARGET_LANGUAGES = de,it
-```
+:::note
+The languages names you do specify in the `target` configuration will be the names of the output files. as example, the localization file for the `de` will be saved as `de.json`.
+:::
 
 ## Next Steps
 
-After you have configured the CLI to work with your project, now you can start translating your source file, see the [Translation](./start-tranlations.md) page for more details.
+After you have configured the CLI to work with your project, now you can start the localization process, see the [Translation](./start-tranlations.md) page for more details.
