@@ -1,0 +1,42 @@
+---
+sidebar_position: 4
+---
+
+# Check Launguages Support
+
+LangSync offer some handy utils to help its users, one of them is the ability of users to check if they can localize and translate to language X before starting the actual process, in this guide we will show you how you can as well.
+
+## When to use this?
+
+Putting the fact that LangSync is using AI models & engines in order to get you the best results, all ISO 939-1 code languages are supported and you can work with them just fine. However, LangSync is not a magic tool that will know all imaginary or fantasy languages, and so, in order to confirm if LangSync knows them, you will need to [check yourself](#check-language-support)
+
+## Check Languages Support
+
+In order to check if LangSync recognize a single or set of Launguage(s), all you need to do is run the following command:
+
+```bash
+langsync supported-languages
+```
+
+This will prompt you to write the languages you want to check, they should be comma separated, as example
+
+```bash
+What language(s) do you want to check? (comma separated):  arabic, japanese, english, german, turkish, somethingElse
+```
+
+**Notice that all are valid languages except "somethingElse".**
+
+After LangSync checks for each language support, it will show the check result like this:
+
+```bash
+Done checking languages support. (1.8s)
+
+The language arabic is supported.
+The language japanese is supported.
+The language english is supported.
+The language german is supported.
+The language turkish is supported.
+The language somethingElse is not supported.
+```
+
+and with this, you can be sure that you can [start your localization process](./start-tranlations) with the ones that are marked with "supported".

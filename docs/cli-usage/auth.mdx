@@ -1,0 +1,96 @@
+---
+sidebar_position: 1
+---
+
+# Authentication
+
+This page will guide you through the authentication process with the CLI.
+
+## How Authentication Work
+
+LangSync is really a tool that is made to help, and not to make it hard to use. you only need to create your own API key, authenticate LangSync with, then start your usage.
+
+## Create your account and API key
+
+In order to create your own LangSync account and get your API key, all you need to do is run the following command:
+
+```bash
+$ langsync account apiKey
+```
+
+it will only ask you to provide a username identifier for that API key, we need you to do that in order to identify you if you faced any issues and you want us to help you:
+
+```bash
+Please enter your desired username (will be used to identify you): _
+```
+
+After your API key os created, you should have a success message with it, something like:
+
+```bash
+API key created successfully! (3.6s)
+
+
+Your API key: 389f5a2bba878e87f88460ab7264204a16b8624016591ef8e32d33208d06d36e
+
+```
+
+:::note
+ Please make sure to copy & save your API key somewhere safe, as you won't be able to retrieve it again!
+:::
+
+Your API key is the only piece that you will need to [authenticate now](#logging-in-to-your-account).
+
+## Logging in to your account
+
+After [creating your own API key](#create-your-account-and-api-key), In order to configure it with LangSync, you will need to run the following command:
+
+```bash
+langsync account auth
+```
+
+You will be prompted to enter that API key:
+
+```bash
+Please, provide your account API key to authenticate.
+You can find & manage your API keys from your dashboard.
+
+Enter API key here: _
+```
+
+Paste it in and hit enter, then wait for LangSync to save it.
+
+## Checking your account stats & info
+
+At any point of using our CLI, you can always check your account information & stats by running the following command:
+
+```bash
+langsync account info
+```
+
+This will fetch your account stats, and show them like:
+
+```bash
+fetched account's information successfully. (0.8s)
+
+The API key in use: ****************************************************************
+User ID: d2a5e2e5-5550-41d5-98a8-48d05c75b035
+User Account Creation Date: 7 minutes ago - 2023-09-29T17:23:22.317Z
+Available API keys: 1
+Processed Localizations: 0
+Most Recent Localization ID: You have no processed localizations.
+Most Recent Localization Date: You have no processed localizations.
+```
+
+## Logging out
+
+If you wish to simply log out from LangSync, you can run the following command:
+
+```bash
+langsync account logout
+```
+
+You will be prompted to confirm your action. once you confirm, you will be logged out of your account and you will need to log in again in order to use LangSync.
+
+## Next Steps
+
+After you have now your account authenticated with LangSync, you can start configuring the CLI to work with your projects, see the [Configuration](./configure.md) page for more details.

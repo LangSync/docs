@@ -4,14 +4,16 @@ sidebar_position: 1
 custom_edit_url: null
 ---
 
-# LangSync
+# Get Started
+
+## What is LangSync?
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-LangSync is an AI powered Command Line Interface (CLI) tool that allows you to target the global market for your software (apps, websites, games, projects...) by processing your original JSON files for one laungage, then with the help of a powerful set of AI engines it generates very accurate other laungages localization & translations that stays in your software context.
+LangSync is an AI powered Command Line Interface (CLI) tool that allows your software (apps, websites, games, projects...) to target the global market by expanding your original JSON localization file(s), And, with the help of a powerful set of AI engines, it generates very accurate & effective new laungages localizations files that matches the context of your original one(s).
 
-As example, if you have a mobile app that supports only the English laungage, which saves all its translations in a `en.json` file, you can literally support any other laungaues by a runinng a simple command, then see our magic happen.
+As example, taking a mobile app that supports only the English laungage, which saves all its English texts & strings in a `en.json` file, LangSync can literally take it, Then provides any other languages localization & translation by runinng a single command.
 
 ## Key Features
 
@@ -25,7 +27,21 @@ As example, if you have a mobile app that supports only the English laungage, wh
 
 - **Not Only For developers**: LangSync is for everyone. if you have or can provide only one JSON file of one laungage translations, then you can generate 10 more, if you are not familiar with CLIs and terminal... don"t worry, LangSync will come as a UI-based software too! subscribe to our email list in order to be the first to try it.
 
-## How it works?
+## Why LangSync
+
+The world is getting smaller and smaller, but the global market is getting bigger, and so, the need for your software to support more languages is getting bigger too. But, the problem is that the process of localizing your software is not that easy, it requires a lot of time, effort and budget, here are some of the most common issues that you may face when you want to localize your software:
+
+- **Time**: Localizing your software is a time-consuming process, it requires a lot of time to translate all the texts & strings of your software, especially when your software is under development and you are adding, modifying features and texts every day.
+
+- **Effort**: Localizing your software is not only about translating the texts, it's also about making sure that the translated texts matches the context of the original ones, and that's a very hard task to do, especially when you are not familiar with the language you are translating to or when you are not a native speaker.
+
+- **Budget**: Localizing your software is not a cheap process, it requires a lot of money to hire a professional translator or many, and that's not a one-time process, you will need to repeat the process on any new update of your software.
+
+- **Accuracy**: When switching to a new language, you want to make sure that the translated texts matches the context of the original ones and not to have a direct translation.
+
+- **Availability**: LangSync is available to use 24/7, you can use it anytime and anywhere, don't tie yourself to a specific time or place yo ship your software.
+
+## How it works
 
 Let's take a real-world use case to demonstrate what you will really get and how it will benefit you. And so, let's say you're a developer who works on a server-side project with NodeJS, Asuuming this file structure:
 
@@ -47,11 +63,11 @@ my-project
 
 ```
 
-This server intends to receive some requests, and returns a localization file to the client so it will use it, this project is really just for demonstrating purpose and not specific, As you can have a Flutter, javascript, electron, laravel, rust, c... projects, the usage sremains the same.
+This server intends to receive some request as exaù^me, and returns a localization file to the client side, this server-side app is really just for demonstrating purpose and it is not specific, it can be anything else, as it can be a Flutter, Javascript, Electron, Laravel, Rust, C... projects, the usage remains the same.
 
 <br />
 
-Let's see what `en.json` contains:
+Let's see what the `en.json` file contains:
 
 <Tabs>
 
@@ -69,38 +85,19 @@ Let's see what `en.json` contains:
   </TabItem>
 </Tabs>
 
-Now that you want to reach the global market, your software wants to supports more languages
+Now, we want our project to target more people, which mean you will need to support those people launguages.
 
-let's say you want to target the **Spanish**, **Arabic**, **German**, **italian** and **Chinese** languages, you will literally need to run a simple command:
+<br />
 
-<Tabs>
-  <TabItem value="powershell" label="Powershell" >
-
-```powershell
-langsync start
-```
-
-  </TabItem>
-
-  <TabItem value="cmd" label="CMD">
-
-```cmd
-langsync start
-```
-
-</TabItem>
-
-<TabItem value="bash" label="Bash">
+let's say that the languages are **Spanish**, **Arabic**, **German**, **italian** and **Chinese** languages, that means that we need to have `es.json`, `ar.json`, `de.json`, `it.json` and `zh.json` files under the `locales` folder, and each file will contain the translated texts of the original `en.json` file, this is a single command away with LangSync, in your terminal, cmd, powershell.. etc, run the following command:
 
 ```bash
 $ langsync start
 ```
 
-  </TabItem>
+<br />
 
-</Tabs>
-
-That's it, now what you will do is to take a short break or prepare another cup of coffee. After the file gets processed by our AI models and finished it's localization, you must see something like this on your terminal:
+That's it, now all what you need to do is to wait for the process to finish, maybe you want to work on your other tasks or to take a coffee break. When you come back, you will find a success message like this:
 
 ```bash
 Localizing process starting..
@@ -120,9 +117,9 @@ All files are created succesfully.
 All done!
 ```
 
-Congratulations, This was a success message and you have now a new langauge localization under the `locales` folder.
+Congratulations, You're done. This was a success message and you have now a new langauge localization under the `locales` folder, go check them out.
 
-Your project folder structure is now:
+Your project folder structure will be now:
 
 ```bash title="📁 .../my-nodejs-projects"
 
@@ -151,6 +148,19 @@ myProject
 These are the content of the new localization files:
 
 <Tabs>
+
+  <TabItem value="en.json" label="en.json">
+
+```json showLineNumbers
+{
+  "hello": "Hello",
+  "world": "World",
+  "welcome": "Welcome to my NodeJS project"
+  ...
+}
+```
+
+  </TabItem>
 
   <TabItem value="es.json" label="es.json">
 
@@ -221,8 +231,6 @@ These are the content of the new localization files:
 
 <br />
 
-Wasn't that hard, isn't it?
-
-## What's Next?
+## Next Steps
 
 After having a general overviewover LangSync, let's dive into the [installation](./installation).
