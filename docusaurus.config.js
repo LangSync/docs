@@ -9,7 +9,7 @@ const config = {
   title: "LangSync Docs",
   tagline:
     "Documentation for LangSync - an AI command line tool for localizing your software on the fly.",
-  favicon: "img/favicon.ico",
+  favicon: "img/brand/favicon.ico",
 
   // Set the production url of your site here
   url: "https://langsync.app",
@@ -42,6 +42,9 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/", // Serve the docs at the site's root
         },
+        pages: {
+          path: "src/pages",
+        },
         blog: false,
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -53,13 +56,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/brand/colotrd_bg.png",
       navbar: {
         title: "LangSync",
         logo: {
           alt: "LangSync Logo",
-          src: "img/logo.png",
+          src: "img/brand/colored_no_bg.png",
         },
         items: [
           {
@@ -89,10 +91,6 @@ const config = {
                 label: "Website",
                 to: "https://langsync.app",
               },
-              {
-                label: "Frequency Asked Questions",
-                to: "/faq",
-              },
             ],
           },
           {
@@ -102,30 +100,26 @@ const config = {
                 label: "Twitter",
                 href: "https://twitter.com/LangSync/",
               },
-              {
-                label: "Email",
-                href: "mailto://TODO",
-              },
             ],
           },
           {
             title: "More",
             items: [
               {
+                label: "Installation",
+                to: "/installation",
+              },
+              {
+                label: "Usage",
+                to: "/cli-usage/auth",
+              },
+              {
                 label: "Bug Report",
                 to: "/bug_report",
               },
               {
-                label: "Privacy Policy",
-                to: "//TODO",
-              },
-              {
-                label: "Terms of Service",
-                to: "//TODO",
-              },
-              {
-                label: "About",
-                to: "//TODO",
+                label: "Frequency Asked Questions",
+                to: "/faq",
               },
             ],
           },

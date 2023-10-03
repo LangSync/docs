@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1347" height="512" viewBox="0 0 1347 512">
+  <defs>
+    <clipPath id="clip-colored_no_bg">
+      <rect width="1347" height="512"/>
+    </clipPath>
+  </defs>
+  <g id="colored_no_bg" clip-path="url(#clip-colored_no_bg)">
+    <text id="LangSync" transform="translate(-15 360)" fill="#0077b6" font-size="329" font-family="DHanna-Medium, D Hanna" font-weight="500"><tspan x="0" y="0">LangSync</tspan></text>
+  </g>
+</svg>

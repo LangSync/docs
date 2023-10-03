@@ -21,19 +21,66 @@ LangSync is currently supported on:
 
 <TabItem value="windows" label="Windows">
 
-1. Download the latest version of LangSync [from here.](//TODO: add download link).
-2. Add the path of the downloaded langsync.exe file to your windows PATH environment variable, so you can use from anywhere including your project directory.
+Follow the steps below to install LangSync on Windows:
+
+<details>
+  <summary>1. Download the latest version of LangSync for Windows</summary>
+
+[Click here to download from our CDN.](https://cdn.langsync.app/0.7.4/windows/langsync.exe)
+
+</details>
+
+<details>
+  <summary>2. Add the downloaded file path to the environment variables (PATH)
+  </summary>
+
+To learn how to update environment variables, see the [Microsoft PowerShell documentation](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.3#saving-changes-to-environment-variables).
+
+This will allow you to use the `langsync` command from anywhere in your CMD/PowerShell.
+
+</details>
 
 <br />
-
-:::info
-To learn how to update environment variables, see the [Microsoft PowerShell documentation](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.3#saving-changes-to-environment-variables).
-:::
 
 </TabItem>
 
 <TabItem value="linux" label="Linux">
-  // TODO: add linu downlaod tutorial.
+
+Follow the steps below to install LangSync on Linux:
+
+<details>
+  <summary>1. Donwload the latest version of LangSync for Linux</summary>
+
+[Click here to download from our CDN.](https://cdn.langsync.app/0.7.4/linux/langsync)
+
+</details>
+
+<details>
+  <summary>2. Make the downloaded file executable</summary>
+
+Open your terminal on the directory where you downloaded the file and run the following command:
+
+```bash
+$ sudo chmod +x langsync
+```
+
+This will make the file executable and you will be able to run it from your terminal.
+
+  </details>
+
+<details>
+  <summary>3. Move the diwnloaded file to the `/bin` directory.</summary>
+
+Open your terminal on the directory where you downloaded the file and run the following command:
+
+```bash
+$ sudo mv langsync /bin
+```
+
+This will move the file to the `/bin` directory, so you can use it from anywhere including your software project directory.
+
+</details>
+
 </TabItem>
 
 <TabItem value="macos" label="MacOS">
@@ -42,12 +89,12 @@ To learn how to update environment variables, see the [Microsoft PowerShell docu
 
 </Tabs>
 
-## Validating A Succesfull Installation
+## Validating A Successfull Installation
 
 After the installation, you should be able to use the `langsync` command in your terminal from any directory. to confirm that, open your command line/terminal and run:
 
 ```bash
-$ langsync -v
+langsync -v
 ```
 
 <br />

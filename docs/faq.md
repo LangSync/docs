@@ -51,4 +51,4 @@ Yes, we can help you, just reach out to us on our [Telegram server](https://t.me
 <br />
 <br />
 
-if you have a question that is not listed here, you can drop it on our [Telegram server](https://t.me/langsync.app) and we will answer it as soon as possible.
+if you have a question that is not listed here, you can drop it on our [Telegram server](https://t.me/langsync.app) and we will answer it as soon as possible. 
