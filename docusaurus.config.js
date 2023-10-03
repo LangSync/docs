@@ -91,6 +91,18 @@ const config = {
                 label: "Website",
                 to: "https://langsync.app",
               },
+              {
+                label: "Pricing",
+                to: "https://langsync.app/#pricing",
+              },
+              {
+                label: "Privacy & Policy",
+                to: "https://langsync.app/privacy",
+              },
+              {
+                label: "Terms & Conditions",
+                to: "https://langsync.app/terms",
+              },
             ],
           },
           {
@@ -99,6 +111,10 @@ const config = {
               {
                 label: "Twitter",
                 href: "https://twitter.com/LangSync/",
+              },
+              {
+                label: "Form",
+                href: "https://langsync.app/#contact",
               },
             ],
           },
