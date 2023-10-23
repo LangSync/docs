@@ -14,19 +14,19 @@ LangSync is really a tool that is made to help, and not to make it hard to use. 
 
 In order to create your own LangSync account and get your API key, all you need to do is run the following command:
 
-```bash
-$ langsync account apiKey
+```langsync
+langsync account create
 ```
 
 it will only ask you to provide a username identifier for that API key, we need you to do that in order to identify you if you faced any issues and you want us to help you:
 
-```bash
+```langsync
 Please enter your desired username (will be used to identify you): _
 ```
 
 After your API key os created, you should have a success message with it, something like:
 
-```bash
+```langsync
 API key created successfully! (3.6s)
 
 
@@ -44,13 +44,13 @@ Your API key is the only piece that you will need to [authenticate now](#logging
 
 After [creating your own API key](#create-your-account-and-api-key), In order to configure it with LangSync, you will need to run the following command:
 
-```bash
+```langsync
 langsync account auth
 ```
 
 You will be prompted to enter that API key:
 
-```bash
+```langsync
 Please, provide your account API key to authenticate.
 You can find & manage your API keys from your dashboard.
 
@@ -63,13 +63,13 @@ Paste it in and hit enter, then wait for LangSync to save it.
 
 At any point of using our CLI, you can always check your account information & stats by running the following command:
 
-```bash
+```langsync
 langsync account info
 ```
 
 This will fetch your account stats, and show them like:
 
-```bash
+```langsync
 fetched account's information successfully. (0.8s)
 
 The API key in use: ****************************************************************
@@ -85,7 +85,7 @@ Most Recent Localization Date: You have no processed localizations.
 
 If you wish to simply log out from LangSync, you can run the following command:
 
-```bash
+```langsync
 langsync account logout
 ```
 
