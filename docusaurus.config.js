@@ -127,7 +127,7 @@ const config = {
               },
               {
                 label: "Usage",
-                to: "/cli-usage/auth",
+                to: "/cli-usage/configure",
               },
               {
                 label: "Bug Report",
