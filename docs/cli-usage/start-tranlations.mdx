@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Start Translation process
 
-After you setup everything from [authenticating to LangSync](./auth) and [configuring](./configure) it for your own project with a `langsync.yaml` file, all what is left is the actual magic to happen, right?
+After you setup everything for your own project, all what is left is the actual magic to happen, right?
 
 For this, open your terminal, CMD or PowerShell.. under your project filter path, then run:
 
@@ -56,12 +56,12 @@ In simple terms, this process is splitt to many tasks that are listed below:
 - Uploading your source file to our servers.
 - AI processing of that file, our engines start to evaluate and get to understand its content & get familiar with it.
 - AI localization & translations to your target languages one by one. (The time that is taken by this really depends on the size of your source file).
-- Once everything is ready, LangSync will start distributing the results to the output directory that you configured, each to its relevant file.
+- Once everything is ready, <a href="https://langsync.app" target="_blank">LangSync</a> will start distributing the results to the output directory that you configured, each to its relevant file.
 - And Done, you should now go checking them by yourself.
 
 ## Error handling
 
-Sometimes, and especially at this starting stage of LangSync, unexpected errors may happen due to any kind of reason while localizing & translating to a specific language, LangSync will create special kind of JSON files (\*.error.json) that includes details of the error, as example if the error occurs while localizing & translation to the de language, a `de.error.json` will be created containing details:
+Sometimes, and especially at this starting stage of <a href="https://langsync.app" target="_blank">LangSync</a>, unexpected errors may happen due to any kind of reason while localizing & translating to a specific language, <a href="https://langsync.app" target="_blank">LangSync</a> will create special kind of JSON files (\*.error.json) that includes details of the error, as example if the error occurs while localizing & translation to the de language, a `de.error.json` will be created containing details:
 
 ```json
 {
