@@ -142,6 +142,12 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} LangSync`,
       },
+      scripts: [
+        {
+          src: "./src/pages/tally.js",
+          async: false,
+        },
+      ],
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,

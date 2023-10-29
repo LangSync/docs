@@ -4,9 +4,9 @@ sidebar_position: 3
 
 # Start Translation process
 
-After you setup everything for your own project, all what is left is the actual magic to happen, right?
+After you [configure](configure) everything for your own project, all what is left is the actual magic to happen, right?
 
-if you prefer seeing an example video of this process in a real project, you can watch this video:
+if you prefer seeing an example video of what the next steps will be like in a real project, you can watch this video:
 
 import ReactPlayer from "react-player";
 
@@ -23,17 +23,18 @@ import ReactPlayer from "react-player";
 <br />
 <br />
 
-Open your terminal, CMD or PowerShell.. under your project filter
-path, then run:
+## How to start the translation process?
+
+Open your terminal, CMD or PowerShell.. under your project directory, then run:
 
 ```langsync
 langsync start
 ```
 
-This command will start the AI localization & translation process, showing you a verbose logging of the progress that is made in real-time.
+This command will start by looking for the configuration file in your project directory, and then start the AI localization & translation process, showing you a verbose output of what is happening in the background and what is the current status of the process.
 
 :::note
-This might take a while, depending on the size of your source file and the number of target languages. so the best thing you can do is to get yourself a cup of coffee and wait for the magic to happen.
+This process should not take long, but it really depends on the size of your source file, and the number of target languages that you have configured.
 :::
 
 After everything succeed, you will see a success message like:
@@ -59,9 +60,9 @@ All files are created successfully
 All done!
 ```
 
-After this process is done, as that message covers, you will find the new localization files in the output directory (in this case, it is the `./example/locales` directory) which is changeable in the `langsync.yaml` configuration file.
+After somrthing like this is shown to you, as that message covers, you will find the new localization files in the output directory (in this case, it is the `./example/locales` directory) which is changeable in the `langsync.yaml` configuration file.
 
-Have a look & review those files.
+And that's it, have a look & review those files and see if everything is as you expected.
 
 :::info
 In case of any error during the process, like if your internet is cut off or some other reason, feel free to save the operation ID which is shown in the response message and contact us with it describing the issue so **we can help**.
@@ -79,7 +80,7 @@ In simple terms, this process is splitt to many tasks that are listed below:
 
 ## Error handling
 
-Sometimes, and especially at this starting stage of <a href="https://langsync.app" target="_blank">LangSync</a>, unexpected errors may happen due to any kind of reason while localizing & translating to a specific language, <a href="https://langsync.app" target="_blank">LangSync</a> will create special kind of JSON files (\*.error.json) that includes details of the error, as example if the error occurs while localizing & translation to the de language, a `de.error.json` will be created containing details:
+if any error occurs during any language localization process, a special kind of JSON files (\*.error.json) that includes details of the error will be created, as example if the error occurs while localizing & translation to the de (German language), a `de.error.json` will be created containing details like this:
 
 ```json
 {
@@ -91,4 +92,14 @@ Sometimes, and especially at this starting stage of <a href="https://langsync.ap
 }
 ```
 
-And you will need to contact us with this in order to look into it and be able to help and provide more practical ways to get over them.
+In some cases, the error might be related to our ends (which we really don't want them to happen), in this case, you can just retry the process again and it should work fine. (but make sure you re-configure LangSync again before retrying to make sure you don't override the previous files that were created successfully)
+
+<br />
+
+if the error occurs again and again and you can't get it to work, feel free to (contact us)[../contact] with the error details and we will be happy to help.
+
+And please, if you have any suggestions or feedback that you see it will help us improve our service, feel free to contact us as well, we will be happy to hear from you.
+
+## Bug reporting
+
+If you find any bug or issue with LangSync, and want to report it, please check what is the best way to do so in the [Bug Report](../bug_report) page.

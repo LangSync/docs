@@ -4,64 +4,110 @@ sidebar_position: 2
 
 # Configuration
 
-This page will teach you how to configure & influence <a href="https://langsync.app" target="_blank">LangSync</a> to your own needs inside your project, including setting up your original localization file, the target new localizations languages, and the output directory..
+This page will teach you how to configure & influence <a href="https://langsync.app" target="_blank">LangSync</a> for your own needs and for your own project, this includes locating up your original localization file, the target new localizations languages, and the output directory and much more..
 
 <a href="https://langsync.app" target="_blank">
-  LangSync
-</a> configurations is basically represented in a `langsync.yaml` file that will
-live in your project root directory, that file will be read and used each time you
-[start the localization process](./start-tranlations), so by just modifying it, you
-modify the whole behavior of <a href="https://langsync.app" target="_blank">
-  LangSync
-</a>
-.
+  {" "}
+  LangSync{" "}
+</a> configurations is basically represented in a special file that will live in
+your project root directory, we support different formats for LangSync configuration,
+you can specify and have the one you prefer, we currently support the `yaml` and
+`json` formats, and so the configuration file can be either `langsync.yaml` or `langsync.json`.
 
-You can either create and modify that file manually, or by using <a href="https://langsync.app" target="_blank">LangSync</a> [config command](#creating-your-configuration-file) which we recommend since it validates your configuration before saving it.
+<br />
+<br />
+
+That file will be read and used each time you [start the localization process](./start-tranlations), so by just modifying it, you modify
+the whole behavior of <a href="https://langsync.app" target="_blank"> LangSync </a> and so you get the flexibility to change it as you want and as your project needs.
+
+You can either create and modify that file manually by creating and naming that file and so fill it with your configurations, or you can make your life much easier by running the config creation [command](#creating-your-configuration-file) which we recommend since
+it validates your configuration before saving it in case you have any mistakes.
 
 ## Creating your configuration file
 
-From your project directory, create a new `langsync.yaml` file by running the following command:
+From your project directory, run the following command:
 
 ```langsync
 langsync config create
 ```
 
-This will prompt you to input all the necessary options in format of questions that you will need to answer such the path of the output directory, the target localization languages..
+<br />
 
-:::note
-if a `langsync.yaml` already exists in your project directory, <a href="https://langsync.app" target="_blank">LangSync</a> will notify you about that and ask you about overwriting it.
+:::tip
+By default running `langsync config create` will create a `langsync.yaml` file, if you want to create a `langsync.json` file instead, you can run `langsync config create --json`.
 :::
 
-After you do set all your configuration options, you will notice that a `langsync.yaml` file is created in your project directory.
+<br />
+
+This will prompt you to input all the necessary parameters and configurations as questions that you will need to answer such the path of the output directory, the target localization languages and more.
+
+:::info
+if the the configuration file already exists in your project directory, <a href="https://langsync.app" target="_blank">LangSync</a> will notify you about that and ask you if you want to override it or not.
+:::
+
+After you do write & put all your configuration options, you will notice that a `langsync.yaml` or `langsync.json` file has been created in your project directory, and so you are ready to start the localization process.
 
 Example of a `langsync.yaml` looks like:
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+
+<TabItem value="langsync.yaml" label="langsync.yaml" default>
 
 ```yaml
 langsync:
   source: "./example/locales/en.json"
-
   output: "./example/locales"
-
   target: [fr, de, ar, de, zh]
 ```
 
-Check [configuration options](#configuration-options) section to learn about all the possible configuration you can have.
+</TabItem>
+
+<TabItem value="langsync.json" label="langsync.json">
+
+```json
+{
+  "langsync": {
+    "source": "./example/locales/en.json",
+    "output": "./example/locales",
+    "target": ["fr", "de", "ar", "de", "zh"]
+  }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+Check [configuration options](#configuration-options) section to learn about all the possible configuration you can specify.
 
 ## Configuration Options
 
-<a href="https://langsync.app" target="_blank">
-  LangSync
-</a> configuration options:
+<br />
 
-- `source`: The JSON source file that contains your current software localizations for a certain languauge, it must be a file path.
+| Option                         | Description                                                                                                                                                       | Required | Default Value | Type     |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------- | -------- |
+| `source`                       | The path of the original localization file that you want to translate.                                                                                            | `Yes`    | -             | `string` |
+| `output`                       | The path of the output directory where the new localization files will be saved.                                                                                  | `Yes`    | -             | `string` |
+| `target`                       | The target languages that you want to translate your localization file to.                                                                                        | `Yes`    | -             | `List`   |
+| `languageLocalizationMaxDelay` | The maximum delay in seconds that a a language process can take, if any language took more the this delay, it will just be skipped and the process will continue. | `No`     | `450`         | `number` |
 
-- `output`: The directory where the new generated localizations JSON files will be put inside, it must be a directory path.
+## Future Configuration Options
 
-- `target`: The new languages which you want to localize your software with, it must be a list of languages names. (We recommend following the the [List of ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for languages).
+These are the future configuration options that will be added to <a href="https://langsync.app" target="_blank">LangSync</a> soon..
 
-:::note
-The languages names you do specify in the `target` configuration will be the names of the output files. as example, the localization file for the `de` will be saved as `de.json`.
-:::
+| Option        | Description                                                                                                                                  | Type     |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| `instruction` | Any additional instructions that you want to inform the AI engine about, this can be useful if you want a special behavior for your process. | `string` |
+
+<br />
+
+## Additional Notes:
+
+- if two or more configuration files are found in your project directory, such having both `langsync.yaml` and `langsync.json`, <a href="https://langsync.app" target="_blank">LangSync</a> will not prioritize one over the other, instead it will throw an error and ask you to remove one of them or rename it.
+- if none of the configuration files are found in your project directory, <a href="https://langsync.app" target="_blank">LangSync</a> will throw an error and ask you to create one of them.
 
 ## Next Steps
 
