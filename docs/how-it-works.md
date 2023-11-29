@@ -205,4 +205,18 @@ These are the content of the new localization files:
 
 </Tabs>
 
+## Video Example
+
+if you prefer seeing an example video of what the next steps will be like in a real project, you can watch this video:
+
+import ReactPlayer from "react-player";
+
 <br />
+
+<center>
+  <ReactPlayer
+    controls
+    url="https://cdn.langsync.app/docs/assets/langsync%20start%20command.mp4"
+  />
+
+</center>

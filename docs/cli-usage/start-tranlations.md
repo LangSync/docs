@@ -2,42 +2,25 @@
 sidebar_position: 3
 ---
 
-# Start Translation process
+# Start Localization
 
-After you [configure](configure) everything for your own project, all what is left is the actual magic to happen, right?
+This page will show you how to start the localization process using the LangSync CLI, we will cover almost eveything you need to know here.
 
-if you prefer seeing an example video of what the next steps will be like in a real project, you can watch this video:
+it is expected that you have already [installed LangSync CLI](/installation) and did set your LangSync [configuration](/cli-usage/configure) in you working project.
 
-import ReactPlayer from "react-player";
+## Start the magic ✨
 
-<br />
-
-<center>
-  <ReactPlayer
-    controls
-    url="https://cdn.langsync.app/docs/assets/langsync%20start%20command.mp4"
-  />
-
-</center>
-
-<br />
-<br />
-
-## How to start the translation process?
-
-Open your terminal, CMD or PowerShell.. under your project directory, then run:
+Open your command line/terminal under your working project directory, then run:
 
 ```langsync
 langsync start
 ```
 
-This command will start by looking for the configuration file in your project directory, and then start the AI localization & translation process, showing you a verbose output of what is happening in the background and what is the current status of the process.
+LangSync CLI now will initiate by looking for the configuration file in your working project directory, analyze it, then start the AI localization & translation process, showing you a verbose output of what exactly is happening in the background and what is the current status of the process in real-time (which is really helpful for debugging and understanding what is happening).
 
-:::note
-This process should not take long, but it really depends on the size of your source file, and the number of target languages that you have configured.
-:::
+## What to expect?
 
-After everything succeed, you will see a success message like:
+After running the provious command above, on full success you will see something like this:
 
 ```langsync
 Localizing process starting..
@@ -60,13 +43,7 @@ All files are created successfully
 All done!
 ```
 
-After somrthing like this is shown to you, as that message covers, you will find the new localization files in the output directory (in this case, it is the `./example/locales` directory) which is changeable in the `langsync.yaml` configuration file.
-
-And that's it, have a look & review those files and see if everything is as you expected.
-
-:::info
-In case of any error during the process, like if your internet is cut off or some other reason, feel free to save the operation ID which is shown in the response message and contact us with it describing the issue so **we can help**.
-:::
+Congratulations, You're done. This was a success message and you have now a new langauge localization under the output directory that you configured, go check them out.
 
 ## What happens under the hood?
 
@@ -75,8 +52,8 @@ In simple terms, this process is splitt to many tasks that are listed below:
 - Uploading your source file to our servers.
 - AI processing of that file, our engines start to evaluate and get to understand its content & get familiar with it.
 - AI localization & translations to your target languages one by one. (The time that is taken by this really depends on the size of your source file).
-- Once everything is ready, <a href="https://langsync.app" target="_blank">LangSync</a> will start distributing the results to the output directory that you configured, each to its relevant file.
-- And Done, you should now go checking them by yourself.
+- Once everything is ready, LangSync CLI will start distributing the results to the output directory that you configured, each to its relevant file.
+- And done, you should now go checking them by yourself.
 
 ## Error handling
 
@@ -97,8 +74,6 @@ In some cases, the error might be related to our ends (which we really don't wan
 <br />
 
 if the error occurs again and again and you can't get it to work, feel free to (contact us)[../contact] with the error details and we will be happy to help.
-
-And please, if you have any suggestions or feedback that you see it will help us improve our service, feel free to contact us as well, we will be happy to hear from you.
 
 ## Bug reporting
 
