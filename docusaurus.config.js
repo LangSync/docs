@@ -65,15 +65,30 @@ const config = {
         },
         items: [
           {
+            href: "https://langsync.app",
+            label: "Home",
+            position: "right",
+          },
+          {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "left",
             label: "Documentation",
           },
           {
-            href: "https://langsync.app",
-            label: "Website",
-            position: "right",
+            // href: "https://github.com/langsync/cli",
+            label: "Github",
+            items: [
+              {
+                label: "Repository",
+                href: "https://github.com/langsync/cli",
+              },
+              {
+                label: "Issues",
+                href: "https://github.com/langsync/cli/issues",
+              },
+            ],
+            position: "left",
           },
         ],
       },
@@ -109,11 +124,11 @@ const config = {
             title: "Contact US",
             items: [
               {
-                label: "Twitter",
-                href: "https://twitter.com/LangSync/",
+                label: "Github",
+                href: "https://github.com/langsync/cli",
               },
               {
-                label: "Form",
+                label: "Contact Us",
                 href: "https://langsync.app/#contact",
               },
             ],

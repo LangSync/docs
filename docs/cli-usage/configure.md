@@ -89,7 +89,7 @@ These are the available configuration options that you can customize in your con
 
 ## Future Configuration Options
 
-These are the future configuration options that will be added to <a href="https://langsync.app" target="_blank">LangSync</a> soon..
+These are the future configuration options that will be added to LangSync soon..
 
 | Option        | Description                                                                                                                                  | Type     |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
@@ -98,4 +98,4 @@ These are the future configuration options that will be added to <a href="https:
 
 ## Next Steps
 
-After you have configured <a href="https://langsync.app" target="_blank">LangSync</a> to your project needs, all what is left is start the localization process, see the [Translation](./start-tranlations) page for more details.
+After you have configured LangSync to your project needs, all what is left is start the localization process, see the [Translation](./start-tranlations) page for more details.

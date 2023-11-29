@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Supported Formats
 
-This page will provide you with the supported localization formats that <a href="https://langsync.app" target="_blank">LangSync</a> can handle, and some conditions that you should be aware of.
+This page will provide you with the supported localization formats that LangSync can handle, and some conditions that you should be aware of.
 
 ## JSON
 
@@ -68,7 +68,7 @@ for example:
 </details>
 
 <details><summary>The variables are ignored and not modified</summary>
-<a href="https://langsync.app" target="_blank">LangSync</a> recognise a variable when it sees it, you can have any many differet variables syntaxes as you want, and <a href="https://langsync.app" target="_blank">LangSync</a> will ignore them and not modify them, for example:
+LangSync recognise a variable when it sees it, you can have any many differet variables syntaxes as you want, and LangSync will ignore them and not modify them, for example:
 
 ```json
 // ✅ Valid JSON file

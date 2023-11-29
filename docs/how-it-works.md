@@ -65,7 +65,7 @@ Now, we want our project to target more people, which mean you will need to supp
 
 <br />
 
-let's say that the languages are **Spanish**, **Arabic**, **German**, **italian** and **Chinese** languages, that means that we need to have `es.json`, `ar.json`, `de.json`, `it.json` and `zh.json` files under the `locales` folder, and each file will contain the translated texts of the original `en.json` file, this is a single command away with <a href="https://langsync.app" target="_blank">LangSync</a>, in your terminal, cmd, powershell.. etc, run the following command:
+let's say that the languages are **Spanish**, **Arabic**, **German**, **italian** and **Chinese** languages, that means that we need to have `es.json`, `ar.json`, `de.json`, `it.json` and `zh.json` files under the `locales` folder, and each file will contain the translated texts of the original `en.json` file, this is a single command away with LangSync, in your terminal, cmd, powershell.. etc, run the following command:
 
 ```langsync
 langsync start
