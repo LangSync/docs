@@ -148,6 +148,11 @@ const config = {
         darkTheme: darkCodeTheme,
         supportedLanguages: ["powershell", "bash"],
       },
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
     }),
 };
 

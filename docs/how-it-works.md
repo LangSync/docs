@@ -1,73 +1,23 @@
 ---
-slug: /
-sidebar_position: 1
-custom_edit_url: null
+sidebar_position: 2
 ---
 
-# Get Started
+# How it Works
 
-<div style={{
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  flexDirection: "column",
-margin: "65px 0"
-}}>
+// todo: imports..
 
-<img
-  src="img/brand/colored_bg.png"
-  style={{
-    borderRadius: "25%",
-    width: "125px",
-    height: "125px",
-  }}
-/>
 
-</div>
+## In Simple Words
 
-## What is <a href="https://langsync.app" target="_blank">LangSync</a>?
+LangSync CLI basically relies on a configuration file that lives in your working project, we support different configuration file formats like JSON, YAML... (`langsync.json`, `langsync.yaml`...)
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
+This configuration file defines the way LangSync behave and execute, starting from your original/default localization file, the target launguages, the output directy...
 
-<a href="https://langsync.app" target="_blank">
-  LangSync
-</a> is an AI powered Command Line Interface (CLI) tool that allows your software
-(apps, websites, games, projects...) to target the global market by expanding your
-original JSON localization file(s), And, with the help of a powerful set of AI engines,
-it generates very accurate & effective new laungages localizations files that matches
-the context of your original one(s).
+After setting the configuration you want, this is where fun begins. Open your Terminal (MacOS/Linux) or PowerShell (Windows) and run the most important command `langsync start` and that is it, LangSync CLI takes care of everything from here localizing to all target launguages and settings the AI generated files in whatever you want.
 
-<br />
-<br />
+⚡ it is always a single command away to make your life easier.
 
-As example, taking a mobile app that supports only the English laungage, which saves all its English texts & strings in a `en.json` file, <a href="https://langsync.app" target="_blank">LangSync</a> can literally take it, Then provides any other languages localization & translations like `ar.json`, `zh.json`, `ru.json`... by runinng a single command.
-
-## Key Features
-
-- **AI Powered**: LangSync harnesses the immense power of AI to provide you with unparalleled localization capabilities. Our AI-powered solution ensures that your software seamlessly adapts to its specific context, making your software truly global.
-
-- **Accurate & precise**: LangSync stands out for its exceptional accuracy and precision. Our cutting-edge technology guarantees not only accurate translations but also an unmatched contextual fit. We ensure that translations seamlessly integrate with the context of your content.
-
-- **Quick and Flawless**: LangSync boasts exceptional speed, enabling rapid translation of your software within seconds to minutes, depending on its size. This agility empowers your development process, making it more flexible and efficient.
-
-- **Easy to use**: LangSync is a developer-centric solution crafted by developers for developers. We prioritize efficiency by offering direct, no-nonsense commands to achieve your goals without any unnecessary clutter.
-
-## Why <a href="https://langsync.app" target="_blank">LangSync</a>
-
-The world is getting smaller and smaller, but the global market is getting bigger, and so, the need for your software to support more languages is getting bigger too. But, the problem is that the process of localizing your software is not that easy, it requires a lot of time, effort and budget, here are some of the most common issues that you may face when you want to localize your software:
-
-- **Time**: Localizing your software is a time-consuming process, it requires a lot of time to translate all the texts & strings of your software, especially when your software is under development and you are adding, modifying features and texts every day.
-
-- **Effort**: Localizing your software is not only about translating the texts, it's also about making sure that the translated texts matches the context of the original ones, and that's a very hard task to do, especially when you are not familiar with the language you are translating to or when you are not a native speaker.
-
-- **Budget**: Localizing your software is not a cheap process, it requires a lot of money to hire a professional translator or many, and that's not a one-time process, you will need to repeat the process on any new update of your software.
-
-- **Accuracy**: When switching to a new language, you want to make sure that the translated texts matches the context of the original ones and not to have a direct translation.
-
-- **Availability**: <a href="https://langsync.app" target="_blank">LangSync</a> is available to use 24/7, you can use it anytime and anywhere, don't tie yourself to a specific time or place yo ship your software.
-
-## How it works
+## Real World Example
 
 Let's take a real-world use case to demonstrate what you will really get and how it will benefit you. And so, let's say you're a developer who works on a server-side project with NodeJS, Asuuming this file structure:
 
@@ -256,7 +206,3 @@ These are the content of the new localization files:
 </Tabs>
 
 <br />
-
-## Next Steps
-
-After having a general overviewover <a href="https://langsync.app" target="_blank">LangSync</a>, let's dive into the [installation](./installation).
