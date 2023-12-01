@@ -85,16 +85,13 @@ These are the available configuration options that you can customize in your con
 | `source`                       | The path of the original localization file that you want to translate.                                                                                            | `Yes`    | -             | `string` |
 | `output`                       | The path of the output directory where the new localization files will be saved.                                                                                  | `Yes`    | -             | `string` |
 | `target`                       | The target languages that you want to translate your localization file to.                                                                                        | `Yes`    | -             | `List`   |
-| `languageLocalizationMaxDelay` | The maximum delay in seconds that a a language process can take, if any language took more the this delay, it will just be skipped and the process will continue. | `No`     | `450`         | `number` |
+| `languageLocalizationMaxDelay` | The maximum delay in seconds that a a language process can take, if any language took more the this delay, it will just be skipped and the process will continue. | `No`     | `200`         | `number` |
+| `instruction` | Any additional instructions that you want to inform the AI engine about, this can be useful if you want a special behavior for your process. | `No`     | -         | `string` |
 
+<!-- 
 ## Future Configuration Options
 
-These are the future configuration options that will be added to LangSync soon..
-
-| Option        | Description                                                                                                                                  | Type     |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| `instruction` | Any additional instructions that you want to inform the AI engine about, this can be useful if you want a special behavior for your process. | `string` |
-
+These are the future configuration options that will be added to LangSync soon.. -->
 
 ## Next Steps
 
