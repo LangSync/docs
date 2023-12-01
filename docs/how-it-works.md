@@ -4,7 +4,8 @@ sidebar_position: 2
 
 # How it Works
 
-// todo: imports..
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 
 ## In Simple Words
