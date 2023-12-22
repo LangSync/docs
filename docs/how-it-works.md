@@ -7,10 +7,9 @@ sidebar_position: 2
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-
 ## In Simple Words
 
-LangSync CLI basically relies on a configuration file that lives in your working project, we support different configuration file formats like JSON, YAML... (`langsync.json`, `langsync.yaml`...)
+LangSync CLI basically relies on a configuration file that lives in your working project, we support different configuration file formats like JSON, YAML... (`langsync.json`, `langsync.yaml`. ..)
 
 This configuration file defines the way LangSync behave and execute, starting from your original/default localization file, the target launguages, the output directy...
 
